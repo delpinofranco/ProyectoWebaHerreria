@@ -443,6 +443,22 @@ footer {
 
   z-index:10;
 }
+.btn-ver-mas{
+    background-color: #D4A373;
+    color: #1A1A1B;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover{
+    transform: scale(1.05);
+}
 @media screen and (max-width: 600px)
 {
 
