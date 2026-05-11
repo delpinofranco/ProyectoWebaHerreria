@@ -1,0 +1,462 @@
+:root {
+    --color-principal: #1A1A1B; /* Oscuro para el header y footer */
+    --color-acento: #D4A373;    /* Dorado para destacar */
+    --color-fondo-claro: #F4F4F4; /* Fondo para secciones de texto */
+    --color-texto: #333333;
+    --blanco: #FFFFFF;
+}
+
+*{
+    color: var(--blanco);
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-principal);
+    overflow-x: hidden;
+}
+main{
+    display: flex;
+    flex-direction: column;
+   
+    background-color: var(--color-fondo-claro);
+    flex-grow: 1;
+    max-width: 1200px; /* El ancho que prefieras */
+    width: 90%;        /* Para que en celulares no toque los bordes */
+    margin: 0 auto;
+
+    
+}
+footer{
+   
+    background-color: var(--color-principal);
+}
+
+.hamburguesa{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguesa span{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+.btn-cerrar{
+     display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cerrar i{
+    font-size: 30px;
+    color: white;
+}
+.logo{
+    height: 80px;
+    border-radius: 100%;
+}
+
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    
+    padding: 10px 20px;
+
+    
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+  
+  
+    
+   
+}
+
+.nav li{
+    font-weight: 800;
+    border-right:2PX solid #F4F4F4;
+    padding-right: 10px;
+    
+   
+}
+.nav a{
+     text-decoration: none;
+}
+.contacto-redes{
+    position: relative;
+}
+
+
+.contacto-redes:hover .submenu {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container-hero{
+    position: relative;
+    min-height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo p {
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+}
+.sobre-taller{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 10px;
+   
+    
+}
+.cont-img1{
+    height: auto;
+    overflow: hidden;
+
+}
+.img-sobre-taller{
+    height: 200px;
+    border-radius: 5px;
+    
+}
+.contenido{
+    width: 400px;
+    padding: 15px;
+    justify-content: center;
+}
+.contenido h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido {
+    text-align: justify;
+}
+
+.contenido p ,h2 {
+    color: #1A1A1B;
+}
+.trabajos{
+    padding-top: 10px ;
+}
+.trabajos h2{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: var(--color-fondo-claro);
+}
+
+.tarjeta {
+    background-color: var(--color-fondo-claro); /* Tu color de herrería */
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden; /* Corta la imagen para que respete el redondeado */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Evita que la foto se deforme */
+}
+
+.descripcion h3,
+.descripcion p{
+    padding: 15px;
+    color: black;
+}
+
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #D4A373;
+    justify-content: center;
+}
+/* El contenedor principal del formulario */
+.contenedor-form {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos hacia abajo */
+    gap: 12px;              /* Espacio uniforme entre cada campo */
+    width: 100%;
+    max-width: 500px;       /* Evita que se estire demasiado en PC */
+    padding: 20px;
+}
+
+/* El título "CONTACTO" */
+.contenedor-form h2 {
+    color: #FFFFFF;         /* Color blanco puro */
+    text-transform: uppercase; /* Siempre en mayúsculas */
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Estilos para el contenedor de cada campo */
+.nombre {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ocultamos los labels visualmente pero los dejamos para accesibilidad */
+.nombre label {
+    display: none; 
+}
+
+/* Estilo para los inputs y el textarea */
+.nombre input, 
+.nombre textarea {
+    background-color: rgba(139, 105, 63, 0.7); /* Fondo café semitransparente rústico */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borde blanco sutil */
+    border-radius: 4px;      /* Esquinas apenas redondeadas */
+    padding: 12px;           /* Aire interno para el texto */
+    color: #FFFFFF;          /* Color del texto que escribe el usuario */
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;  /* El padding no afecta el ancho total */
+}
+
+/* Estilo para el texto de sugerencia (Placeholder) */
+.nombre input::placeholder, 
+.nombre textarea::placeholder {
+    color: rgba(255, 255, 255, 0.9); /* Blanco casi opaco */
+    text-transform: uppercase;       /* Mayúsculas como en la imagen */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el botón enviar */
+.btn-enviar {
+    background-color: #FFFFFF; /* Fondo blanco sólido */
+    color: #333333;            /* Texto oscuro */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 25px;
+    font-weight: 900;          /* Texto bien grueso */
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-start;    /* Lo alinea a la izquierda, no a todo el ancho */
+    margin-top: 5px;
+    transition: 0.3s;          /* Animación suave al pasar el mouse */
+}
+
+.btn-enviar:hover {
+    background-color: #f0f0f0; /* Cambio sutil al pasar el mouse */
+    transform: scale(1.02);    /* Crece un poquito */
+}
+
+.contendor-mapa{
+    
+    height: 400px;
+}
+
+.mapa{
+     width: 100%;
+    max-width: 400px;
+    height: 400px;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: var(--color-principal); /* El oscuro que ya definiste */
+    padding: 30px;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio entre los iconos */
+    margin-bottom: 15px;
+}
+
+.icono i {
+    font-size: 30px;          /* Tamaño del icono */
+    color: var(--blanco);    /* Empiezan en blanco */
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.icono:hover i {
+    color: var(--color-acento); /* Cambian al dorado de la herrería */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+.contacto i,
+.contacto p,
+.contacto a{
+    color: #F4F4F4;
+    font-size: 18px;
+}
+.btn-whatsapp{
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #25D366;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    z-index: 2;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp i{
+    font-size: 35px;
+    color: white;
+}
+
+.btn-whatsapp:hover{
+    transform: scale(1.1);
+}
+.btn-arriba{
+    position: sticky;
+
+    bottom: 20px;
+    left: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--color-acento);
+
+    display:block;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+.btn-arriba i{
+    font-size: 22px;
+    color: white;
+}
+
+.btn-arriba:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width: 600px)
+{
+    .container-hero{
+       
+       background-position: 60% center;
+    }
+
+   
+    }
+     .container-nav{
+       
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    .hamburguesa{
+        display: flex;
+        flex-direction: column;
+        
+    }
+   
+ .nav {
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    top: 80%;
+    left: 0;
+
+    width: 100%;
+    padding: 20px;
+
+      background-color: rgba(26, 26, 27, 0.5);
+    backdrop-filter: blur(5px);
+
+    z-index: 3;
+}
+.nav li{
+    border-right: none;
+}
+
+  .logo{
+    height: 60px;
+  }
+  .titulo {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 20px;
+   
+}
+
+.titulo h1{
+    font-size: 25px;
+   
+}
+ .titulo h1,
+.titulo p{
+justify-content: center;
+}
+
+
