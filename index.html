@@ -2,139 +2,215 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herreria hyj</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Herreria hyj</title>
 </head>
 <body>
-   <header>
-    <nav class="container-nav">
-        <img class="logo" src="logo.jpeg" alt="">
-        <button class="hamburguesa" id="hambur">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <button class="btn-cerrar" id="btn-cerrar">
-            <i class="fa-solid fa-xmark"></i>
+    <header>
+      <div class="logo-placeholder">
+              <span class="logo-main">HyJ</span>
+              <span class="logo-sub">HERRERÍA</span>
+            </div>
+        <nav class="nav-container">
+            <ul class="container-opciones">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Trabajo</a></li>
+                
+            </ul> 
+            <a class="btn-contact" href="">Contacto</a>   
+        </nav>
+        <button class="btn-hamb">
+            <i class="fa-solid fa-bars"></i>
         </button>
         
-        <ul class="nav" id="nava">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-            <li><a href="#trabajos">Trabajos</a></li>
-            <li class="contacto-redes"><a href="#contacto">Redes sociales</a>
-             
-            </li>
-        </ul>
-    </nav>
-    <section class="container-hero">
-        <div class="titulo">
-            <h1>Herreria artesanal de calidad</h1>
-            <p>Forjando ideas, creando estructuras duraderas</p>
-        </div>
-       
-    </section>
-   </header>
-  
-   <main>
-        <section>
-            <div class="sobre-taller">
-                <div class="cont-img1">
-                    <img class="img-sobre-taller" src="img-contenido.png" alt="">
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container-hero">
+                    <div class="container-info">
+                        <span class="hero-subtitle">
+                        DISEÑAMOS Y FABRICAMOS
+                    </span>
+
+                    <h1 class="hero-title">
+                        SOLUCIONES <br>
+                        EN <span>HERRERÍA</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Calidad, diseño y resistencia en cada proyecto.
+                        <br>
+                        Trabajos a medida para hogares, comercios e industrias.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">
+                            PEDÍ TU PRESUPUESTO
+                            
+                        </a>
+
+                        <a href="#" class="btn btn-secondary">
+                            VER TRABAJOS
+                        </a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="contenido">
-                    <h2>Sobre el taller</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias adipisci beatae itaque error officia quas commodi blanditiis deleniti, vitae consequuntur corrupti quo sit quibusdam corporis quae? Quis natus sunt explicabo.</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="trabajos">
-            <h2>Nuestros trabajos</h2>
-            <div id="galeria-trabajos" class="contenedor-tarjetas">
+                <div class="container-procesos">
+                      <div class="proceso border">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>MATERIALES DE CALIDAD</h3>
+                    </div>
 
-                </div>
-                    <div id="miModal" class="modal">
+                    <div class="proceso border">
+                        <i class="fa-solid fa-pencil-ruler"></i>
+                        <h3>DISEÑOS A MEDIDA</h3>
+                    </div>
 
-                    <span class="cerrar">&times;</span>
+                    <div class="proceso border">
+                        <i class="fa-regular fa-clock"></i>
+                        <h3>CUMPLIMOS PLAZOS</h3>
+                    </div>
 
-                    <div class="modal-content">
-                        <img id="imgModal" src="" alt="">
-                        <h2 id="tituloModal"></h2>
-                        <p id="descModal"></p>
+                    <div class="proceso">
+                        <i class="fa-regular fa-handshake"></i>
+                        <h3>ATENCIÓN PERSONALIZADA</h3>
                     </div>
 
                 </div>
-            <button id="btn-ver-mas" class="btn-ver-mas">Ver más trabajos</button>
-    
-        </section>
-
-        <section class="contacto" >
-             <form action="" class="contenedor-form">
-                <h2>Contacto</h2>
-
-                <div class="nombre"> <!-- Tu clase solicitada -->
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="NOMBRE" required>
-                </div>
-
-                <div class="nombre">
-                    <label for="celular">Correo electrónico</label>
-                    <input type="tel" id="celular" name="celular" placeholder="CORREO ELECTRÓNICO" required>
-                </div>
-
-                <div class="nombre">
-                    <label for="whatsapp">WhatsApp/Teléfono</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="WHATSAPP/TELÉFONO" required>
-                </div>
-
-                <div class="nombre">
-                    <label for="mensaje">Consulta o Pedido</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="MENSAJE" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-enviar">ENVIAR</button>
-            </form>
-
-             <div class=" contenedor-mapa">
-                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1184.4970502191265!2d-60.89231903975473!3d-32.89119854879203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6496ee5840f8d%3A0x24b716e17e8e491b!2sLibertad%2020%2C%20S2134%20Rold%C3%A1n%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1778289009903!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-             </div>
-            
-        </section>
-   </main>
-   
-   
-   
-   <footer>
-        <div class="redes-sociales">
-            <a href="https://facebook.com" target="_blank" class="icono">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="icono">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/tu-numero" target="_blank" class="icono">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+              
+                            
         </div>
-        <p>&copy; 2026 Herrería HyJ - Todos los derechos reservados.</p>
-        <button class="btn-arriba" id="btnArriba">
-            <i class="fa-solid fa-arrow-up"></i>
+  
+       
+</section>
+
+<section>
+    <div class="container-sobrenostros">
+        <div class="contenido">
+             <h1>Herreria <span>HyJ</span></h1>
+            <p>
+            Somos un taller especializado en trabajos de herrería con años de experiencia brindando soluciones seguras, duraderas y estéticas.
+            <br><br>
+            Nos enfocamos en la calidad, el detalle y la satisfacción de nuestros clientes.
+            </p>
+        
+        </div>
+       
+        <img class="imgcon" src="img2.jpeg" alt="">
+     
+       
+    </div>
+</section>
+
+<section class="container-galeria">
+    <h1>Galería</h1>
+    <div class="container-buttons">
+        <div class="item"><a href="">Todos</a></div>
+        <div class="item">Portonos</div>
+        <div class="item">Rejas</div>
+        <div class="item">Escaleras</div>
+        <div class="item">Techos</div>
+        <div class="item">Barandas</div>
+    </div>
+    <div class="container-imgs">
+        <img src="img2.jpeg" alt="">
+        <img src="img3.jpeg" alt="">
+         <img src="img2.jpeg" alt="">
+        <img src="img3.jpeg" alt="">
+    </div>
+</section>
+        
+    </main>
+   <footer class="main-footer">
     
-        </button>
-    </footer>
-     <a href="https://wa.me/5493410000000" class="btn-whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div class="footer-cta">
+      <div class="cta-container">
+        <div class="cta-left">
+          <div class="cta-icon-circle">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="cta-text">
+            <span>¿TENÉS UN PROYECTO EN MENTE?</span>
+            <h2>¡HABLEMOS!</h2>
+          </div>
+        </div>
+        
+        <div class="cta-middle">
+          <p>Contanos tu idea y te asesoramos sin compromiso.</p>
+        </div>
+        
+        <div class="cta-right">
+          <a href="https://wa.me/543411234567" target="_blank" class="btn-whatsapp-footer">
+            <i class="fa-brands fa-whatsapp"></i> ESCRIBINOS POR WHATSAPP
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-grid">
+        
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <div class="logo-placeholder">
+              <span class="logo-main">HyJ</span>
+              <span class="logo-sub">HERRERÍA</span>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f facebook" ></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>NAVEGACIÓN</h3>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Trabajos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="footer-col">
+          <h3>SERVICIOS</h3>
+          <ul>
+            <li><a href="#">Portones</a></li>
+            <li><a href="#">Rejas</a></li>
+            <li><a href="#">Barandas</a></li>
+            <li><a href="#">Escaleras</a></li>
+            <li><a href="#">Estructuras metálicas</a></li>
+            <li><a href="#">Trabajos a medida</a></li>
+          </ul>
+        </div> -->
+
+        <div class="footer-col contact-col">
+          <h3>CONTACTO</h3>
+          <ul>
+            <li><i class="fa-solid fa-phone"></i> <span>341 123 4567</span></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Roldán, Santa Fe, Argentina</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span>Lunes a Sabado de 8 a 16 hs</span></li>
+          </ul>
+        </div>
+
+      </div>
+      
+      <div class="footer-watermark">
+        <i class="fa-solid fa-hammer"></i>
+      </div>
+    </div>
+
+  </footer>
     
-   <script src="tarjetas.js"></script>
-    <script src="menu.js"></script>
-    <script src="tarjetas.js"></script>
 </body>
 </html>
+

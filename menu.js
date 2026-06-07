@@ -19,4 +19,16 @@ if(getComputedStyle(btnoCerrar).display  === "flex"){
     hamburguesa.style.display = "flex"
     btnoCerrar.style.display = "none";
 }})
-;
+
+window.addEventListener("resize", () => {
+
+    if(window.innerWidth > 600){
+
+        nav.style.display="";
+
+        hamburguesa.style.display = "";
+        btnoCerrar.style.display= "";
+       
+    }
+    
+})
