@@ -13,18 +13,19 @@
               <span class="logo-main">HyJ</span>
               <span class="logo-sub">HERRERÍA</span>
             </div>
-        <nav class="nav-container">
+        <nav id="nava" class="nav-container">
+           
             <ul class="container-opciones">
                 <li><a href="">Inicio</a></li>
                 <li><a href="">Nosotros</a></li>
                 <li><a href="">Trabajo</a></li>
-                
             </ul> 
             <a class="btn-contact" href="">Contacto</a>   
         </nav>
-        <button class="btn-hamb">
+        <button id="hambur" class="btn-hamb">
             <i class="fa-solid fa-bars"></i>
         </button>
+        <button id="cerrar" class="btn-cerrar">&times;</button>
         
     </header>
     <main>
@@ -59,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="container-procesos">
+                <!-- <div class="container-procesos">
                       <div class="proceso border">
                         <i class="fa-solid fa-shield-halved"></i>
                         <h3>MATERIALES DE CALIDAD</h3>
@@ -80,7 +81,7 @@
                         <h3>ATENCIÓN PERSONALIZADA</h3>
                     </div>
 
-                </div>
+                </div> -->
               
                             
         </div>
@@ -116,12 +117,12 @@
         <div class="item">Techos</div>
         <div class="item">Barandas</div>
     </div>
-    <div class="container-imgs">
-        <img src="img2.jpeg" alt="">
-        <img src="img3.jpeg" alt="">
-         <img src="img2.jpeg" alt="">
-        <img src="img3.jpeg" alt="">
+    <div  id="galeria" class="container-imgs">
+
+
     </div>
+      <button class="btn-anterior" id="anterior">❮</button>
+      <button class="btn-siguiente" id="siguiente">❯</button>
 </section>
         
     </main>
@@ -210,7 +211,8 @@
     </div>
 
   </footer>
-    
+  <script src="galeria.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>
 
