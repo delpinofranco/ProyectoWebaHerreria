@@ -9,23 +9,46 @@ const imagenes = [
     "img3.jpeg"
 ];
 
-let containersImg = document.getElementById("galeria");
 
-function agregarImg(){
-    for (let index = 0; index <= imagenes.length -1; index++) {
-        containersImg.innerHTML += `<img src="${imagenes[index]}" alt=""> ` 
-        
-    }
+
+let indice = 0;
+
+function mostrarImagen(posicion){
+
+    indice = posicion;
+
+    document.getElementById("imagenPrincipal")
+        .src = imagenes[indice];
+
+    actualizarMiniaturas();
 }
 
-agregarImg();
+function cambiarSlide(direccion){
 
+    indice += direccion;
 
+    if(indice >= imagenes.length){
+        indice = 0;
+    }
 
+    if(indice < 0){
+        indice = imagenes.length - 1;
+    }
 
+    mostrarImagen(indice);
+}
 
+function actualizarMiniaturas(){
 
+    const thumbs =
+        document.querySelectorAll(".miniaturas img");
 
+    thumbs.forEach(img =>
+        img.classList.remove("active"));
+
+    thumbs[indice]
+        .classList.add("active");
+}
 
 
 
