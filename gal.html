@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .galeria{
+            display: grid;
+            grid-template-rows: 1fr 250px;
+            background-color: aqua;
+            position: relative;
+           
+        }
+        .galeria img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .miniaturas{
+            display: flex;
+            justify-content: center;
+   
+            gap: 1rem;
+
+        }
+
+        .miniaturas img{
+            object-fit: cover;
+            width: 200px;
+        }
+
+        .btns{
+            position: absolute;
+            right:2.5rem;
+        }
+
+        .btna{
+              position: absolute;
+            left:2.5rem;
+
+        }
+
+   
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <img id="img1" src="/img/img1.jpeg" alt="">
+        <div id="cont" class="miniaturas">
+               
+
+        </div>
+ 
+
+        
+    </div>
+     <button id="s" class="btns">siguiente</button>
+    <button id="a" class="btna">atras</button>
+</body>
+<script src="prueba.js"></script>
+</html>

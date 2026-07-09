@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Herreria hyj</title>
 </head>
 <body>
-    <header>
+    <header >
        <div class="logo-placeholder">
               <span class="logo-main">HyJ</span>
               <span class="logo-sub">HERRERÍA</span>
@@ -17,10 +17,10 @@
            
 
             <ul class="container-opciones">
-                <li ><a href=""><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li ><a href=""><i class="fa-solid fa-user-group"></i>Nosotros</a></li>
-                <li><a href=""><i class="fa-solid fa-briefcase"></i>Trabajo</a></li>
-                 <li><i class="fa-solid fa-globe"></i>Redes socailes</li>
+                <li ><a href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li ><a href="#nos"><i class="fa-solid fa-user-group"></i>Nosotros</a></li>
+                <li><a href="#gal"><i class="fa-solid fa-briefcase"></i>Trabajo</a></li>
+                <li class="list-redes"><a href=""><i class="fa-solid fa-globe"></i> Redes sociales</a></li>
               
                 <li class="redes-responsive"> 
                     <div class="redes whatsapp">
@@ -40,7 +40,7 @@
                      </div>
                 </li>
                 
-                </ul> 
+            </ul> 
             
             <a class="btn-contact" href="">Contacto</a>   
         </nav>
@@ -51,7 +51,7 @@
         
     </header>
     <main>
-        <section class="hero">
+        <section class="hero reveal" id="inicio">
             <div class="container-hero">
                   <div class="container-info">
                         <span class="hero-subtitle">
@@ -65,41 +65,68 @@
 
                 
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary">
+                        <a href="#" class="btn">
                             PEDÍ TU PRESUPUESTO    
                         </a>
-                        <a href="#" class="btn btn-secondary">
+                        <a href="#" class="btn">
                             VER TRABAJOS
                         </a>
                         </div>
                     </div>
                 </div>                
-        </div>
+     
   
        
 </section>
 
- <section class="primer-section">
+ <section id="nos" class="primer-section reveal">
     <div class="container-sobrenostros">
         <div class="contenido">
-             <h1>Herreria <span>HyJ</span></h1>
-             <div class="borde"></div>
+            <h3>Sobre nosotros</h3>
+            <h1>Herreria <span>HyJ</span></h1>
+             <br>
             <p>
             Somos un taller especializado en trabajos de herrería con años de experiencia brindando soluciones seguras, duraderas y estéticas.
-            <br><br>
             Nos enfocamos en la calidad, el detalle y la satisfacción de nuestros clientes.
             </p>
+            <br>
+           
+            <div class="beneficios">
+
+                <div class="beneficio">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Más de 10 años de experiencia</span>
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Materiales de primera calidad</span>
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Atención personalizada</span>
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Presupuestos sin cargo</span>
+                </div>
+
+             </div>
         </div>
+   
+
         <div class="imgcont">
-          <img class="imgcon" src="img2.jpeg" alt="">
+          <img class="imgcon" src="/img/img2.jpeg" alt="">
         </div>     
     </div>
 </section> 
 
-<section class="proceso-section">
+<section class="proceso-section reveal">
 
     <div class="title-trabajos">
-        <h2>Proceso<span> de trabajo</span></h2>
+        <h2>Procesos<span> de trabajo</span></h2>
         <div class="borde"></div>
     </div>
 
@@ -147,13 +174,48 @@
     </div>
 </section>
 
-<section class="seccion-servicio">
-  <div class="title-servicio">
-    <h2>Nuestro <span>servicios</span></h2>
-    <div class="borde"></div>
-  </div>
-  <div class="procesos">
+
+
+<section class="galeria reveal" id="gal">
+    <div class="title-trabajos">
+        <h2>Nuestro <span>trabajos</span></h2>
+        <div class="borde"></div>
+    </div>
+
+    <div class="slider-container">
+        <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+
+        <img id="imagenPrincipal"
+             src="img/img1.jpeg"
+             alt="Trabajo realizado">
+
+        <button class="next" onclick="cambiarSlide(1)">❯</button>
+    </div>
+
+    <!-- <div class="miniaturas">
+        <img src="img/img1.jpeg"
+             onclick="mostrarImagen(0)"
+             class="active">
+
+        <img src="img/img2.jpeg"
+             onclick="mostrarImagen(1)">
+
+        <img src="img/img3.jpeg"
+             onclick="mostrarImagen(2)">
+
+       
+    </div> -->
+</section>
+<section class="seccion-servicio reveal">
     
+
+
+  <div class="procesos">  
+    <div class="title-servicio">
+        <h2>Nuestro <span>servicios</span></h2>
+        <div class="borde"></div>
+    </div>
+
     <div class="servicio">
       <i class="fa-solid fa-helmet-safety"></i>
       <h3>Techos y Estructuras</h3>
@@ -175,86 +237,63 @@
     </div>
 
   </div>  
-</section>
-
-<section class="galeria">
-    <div class="title-trabajos">
-        <h2>Nuestro <span>trabajos</span></h2>
-        <div class="borde"></div>
-    </div>
-
-    <div class="slider-container">
-        <button class="prev" onclick="cambiarSlide(-1)">❮</button>
-
-        <img id="imagenPrincipal"
-             src="img1.jpeg"
-             alt="Trabajo realizado">
-
-        <button class="next" onclick="cambiarSlide(1)">❯</button>
-    </div>
-
-    <div class="miniaturas">
-        <img src="img1.jpeg"
-             onclick="mostrarImagen(0)"
-             class="active">
-
-        <img src="img2.jpeg"
-             onclick="mostrarImagen(1)">
-
-        <img src="img3.jpeg"
-             onclick="mostrarImagen(2)">
-
-       
-    </div>
-</section>
-
+</section> 
          
   </main>
-   <footer >
-      <div class="title-trabajos">
+   <footer class="reveal" >
+      <!-- <div class="title-trabajos">
         <h2>Nos <span>ubicamos</span></h2>
         <div class="borde"></div>
-    </div>
+    </div> -->
     <div class="ubicacion">
-      
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.5166775633147!2d-60.89583916016311!3d-32.896404439901794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6496547d1050b%3A0x96db75634cc8f606!2sPeru%20524%2C%20Rold%C3%A1n%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1782568641289!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
+        <h2>Nos <span>ubicamos</span></h2>
+        <iframe  loading="lazy"
+            allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.5166775633147!2d-60.89583916016311!3d-32.896404439901794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6496547d1050b%3A0x96db75634cc8f606!2sPeru%20524%2C%20Rold%C3%A1n%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1782568641289!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
     <div class="contacto">
-       <h3>CONTACTO</h3>
+        
      
-          <div class="contacto-col">
+        <div class="contacto-col">
+            
             <ul class="conatainer-info">
               <li><i class="fa-solid fa-phone"></i> <span>341 123 4567</span></li>
               <li><i class="fa-solid fa-location-dot"></i> <span>Roldán, Santa Fe, Argentina</span></li>
               <li><i class="fa-solid fa-clock"></i> <span>Lunes a Sabado de 8 a 16 hs</span></li>
             </ul>
+
+              <div class="social-links">
+
+                <div class="titulo-redes">
+                    <h3>Redes sociales</h3>
+                </div>
+
+            <div class="redes-sociales">
+                <a href="https://facebook.com" target="_blank" class="facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://instagram.com" target="_blank" class="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/5493411234567" target="_blank" class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
         </div>
     </div>
-    <div class="social-links">
+        </div>
 
-      <div class="titulo-redes">
-        <h3>Redes sociales</h3>
-      </div>
-
-      <div class="redes-sociales">
-        <a href="https://facebook.com" target="_blank" class="facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-        <a href="https://instagram.com" target="_blank" class="instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://wa.me/5493411234567" target="_blank" class="whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </div>
-
-    </div>
+       
    
+   <!-- <a href="#inicio" class="btn-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a> -->
   </footer> 
-  <script src="galeria.js"></script>
-    <script src="menu.js"></script>
+  <script src="/js/animacion.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/galeria.js"></script>
 </body>
 </html>
 

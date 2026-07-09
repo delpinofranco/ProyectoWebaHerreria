@@ -18,3 +18,11 @@ btnoCerrar.addEventListener("click",()=>{
         btnoCerrar.style.display = "none";
     }
 })
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+        nav.style.display = "";
+        hamburguesa.style.display = "";
+        btnoCerrar.style.display = "";
+    }
+});
