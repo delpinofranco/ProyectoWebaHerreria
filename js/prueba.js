@@ -25,7 +25,7 @@ const mini   = document.getElementById("cont")
 let indice = 0;
 siguiente.addEventListener("click",()=>{
     indice++;
-if (imagenes.length > indice) {
+if (imagenes.length  >= indice) {
     
    src.src = imagenes[indice];
 }
@@ -36,16 +36,34 @@ else{
 
 })
 
+atras.addEventListener("click",()=>{
+    
+    if(indice > 0 ){
+        indice--;
+        src.src = imagenes[indice];
+    }
+    else{
+        
+        indice = imagenes.length -1;
+        src.src =imagenes[indice];
+        console.log(indice);
+    }
+})
+
 function agrergar(){
 
     for (let index = 0; index < imagenes.length; index++) {
          const img = document.createElement("img");
              img.src = imagenes[index];
-             mini.appendChild(img);
+             mini.appendChild(img);  
              
+             img.addEventListener("click",()=>{
+                src.src = imagenes[index]
+             })
         
-    }
-  
-}
+    } ; 
+};
 
-agrergar()
+
+
+agrergar();

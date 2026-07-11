@@ -319,69 +319,90 @@ header{
 .paso i{
   font-size: 2rem;
 }
-
-.galeria{
-    width:60%;
-    height: 400px;
-    margin:80px auto;
-}
-
-.galeria h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.slider-container{
-    position:relative;
+    .galeria-contenedor{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    .galeria{
+    width: 900px;
+    display: grid;
+    grid-template-rows: 500px 120px;
+    gap: 1rem;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    position: relative;
     
 }
 
-.slider-container img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.prev,
-.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    border:none;
-    background:rgba(0,0,0,.5);
-    color:white;
-    padding:15px;
-    cursor:pointer;
-    font-size:24px;
-}
-
-.prev{
-    left:10px;
-}
-
-.next{
-    right:10px;
+.galeria > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .miniaturas{
-    display:flex;
-    gap:10px;
-    margin-top:15px;
+    display: flex;
+    gap: .8rem;
+    overflow-x: auto;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+.miniaturas::-webkit-scrollbar{
+    height: 8px;
+}
+
+.miniaturas::-webkit-scrollbar-thumb{
+    background: #999;
+    border-radius: 10px;
 }
 
 .miniaturas img{
-    width:80px;
-    height:80px;
-    object-fit:cover;
-    cursor:pointer;
-    opacity:.6;
-    border-radius:5px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    flex-shrink: 0;
 }
 
-.miniaturas img:hover,
-.miniaturas img.active{
-    opacity:1;
+.miniaturas img:hover{
+    transform: scale(1.05);
+    opacity: .8;
+}
+
+.btns,
+.btna{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,.6);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btns:hover,
+.btna:hover{
+    background: rgba(0,0,0,.85);
+}
+
+.btns{
+    right: 14rem;
+}
+
+.btna{
+    left: 14rem;
 }
 
 
@@ -395,10 +416,14 @@ header{
   align-items: center;
   margin-bottom: 3rem;
   gap: 2rem;
+
+  margin-top: 4rem;
+ 
   
 }
 .procesos{
   display: flex;
+  
   gap: 4rem;
 
 }
@@ -864,21 +889,45 @@ footer{
 
 /* galeriaa*/
 
-.galeria{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width:90%;
-  height: auto                                               ;
-  padding: 1rem ;
-  box-shadow: 0 8px 10px rgba(0,0,0,0.2);
-  margin: 1rem;
-    
-}
+ .galeria-contenedor{
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
 
-.miniaturas{
-  justify-content: center;
-}
+    .galeria{
+        width: 100%;
+        max-width: 650px;
+        grid-template-rows: 380px 90px;
+        padding: 15px;
+        gap: .8rem;
+    }
+
+    .miniaturas{
+        gap: .5rem;
+    }
+
+    .miniaturas img{
+        width: 75px;
+        height: 75px;
+    }
+
+    .btns,
+    .btna{
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        top: 42%;
+    }
+
+    .btns{
+      right: 0.5rem;
+    }
+    .btna{
+     left:0.5rem;
+    }
+
+
+
 
 /*footer*/
 
