@@ -1,4 +1,5 @@
- "./img/img1.jpeg",
+const imagenes = [
+  "./img/img1.jpeg",
   "./img/img2.jpeg",
   "./img/img3.jpeg",
   "./img/img4.jpeg",
@@ -14,6 +15,8 @@
   "./img/img14.jpeg",
   "./img/img15.jpeg",
   "./img/img16.jpeg"
+];
+
 const siguiente = document.getElementById("s");
 const atras = document.getElementById("a");
 const src = document.getElementById("img1");
